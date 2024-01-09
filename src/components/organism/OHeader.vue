@@ -20,17 +20,13 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { router } from '../../router.ts'
   import MHamburgerMenu from '../molecule/MHamburgerMenu.vue'
 
   export default defineComponent({
-    name: '',
-    setup () {
-      console.log(router.options.routes)
-    },
+    name: 'OHeader',
+
     components: {
       MHamburgerMenu
-
     }
   })
 </script>
