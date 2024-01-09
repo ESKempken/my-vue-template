@@ -1,10 +1,9 @@
 <template>
   <div class="TViewLayout">
-
-    <OHeader/>
+    <OHeader />
 
     <main class="TViewLayout__content">
-      <slot/>
+      <slot />
     </main>
   </div>
 </template>

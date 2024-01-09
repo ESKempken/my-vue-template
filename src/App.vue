@@ -1,6 +1,6 @@
 <template>
   <TViewLayout>
-    <RouterView/>
+    <RouterView />
   </TViewLayout>
 </template>
 

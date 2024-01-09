@@ -1,6 +1,6 @@
 <template>
   <div class="OHero">
-    <span class="OHero__background"/>
+    <span class="OHero__background" />
 
     <div class="OHero__content">
       <AText

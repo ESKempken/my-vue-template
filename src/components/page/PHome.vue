@@ -1,13 +1,12 @@
 <template>
   <div class="PHome">
-
     <!-- FIXME -->
     <!--    <section style="width: 100%; height: 1200px;">-->
     <!--      <OHero/>-->
     <!--    </section>-->
 
     <div class="PHome__subtitle">
-      <ADivider/>
+      <ADivider />
 
       <AText
         color="dark"

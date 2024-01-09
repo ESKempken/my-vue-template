@@ -14,19 +14,15 @@
       <nav>
         <ElMenu>
           <template v-for="route in $router.options.routes">
-
             <ElMenuItem>
               <router-link :to="route.path">
                 {{ route.name }}
               </router-link>
             </ElMenuItem>
-
           </template>
         </ElMenu>
       </nav>
-
     </aside>
-
   </div>
 </template>
 
@@ -37,6 +33,7 @@
 
   export default defineComponent({
     name: 'MNavHamburger',
+    components: { AIcon, ElMenuItem, ElMenu },
     data () {
       return {
         expanded: false
@@ -46,8 +43,7 @@
       toggleMenu () {
         this.expanded = !this.expanded
       }
-    },
-    components: { AIcon, ElMenuItem, ElMenu }
+    }
   })
 </script>
 

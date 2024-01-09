@@ -1,5 +1,5 @@
 <template>
-  <hr class="ADivider"/>
+  <hr class="ADivider">
 </template>
 
 <script lang="ts">

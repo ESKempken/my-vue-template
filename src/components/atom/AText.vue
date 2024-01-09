@@ -6,7 +6,7 @@
     :data-weight="weight"
     class="QText"
   >
-    <slot/>
+    <slot />
   </Component>
 </template>
 

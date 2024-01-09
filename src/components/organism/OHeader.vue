@@ -7,13 +7,12 @@
     >
 
     <div data-device="mobile">
-      <MNavHamburger/>
+      <MNavHamburger />
     </div>
 
     <div data-device="desktop">
-      <MNavPanel/>
+      <MNavPanel />
     </div>
-
   </div>
 </template>
 

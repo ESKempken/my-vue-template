@@ -25,12 +25,6 @@
     name: 'AButton',
     components: { AText },
 
-    setup (props) {
-      return {
-        tag: props.href ? 'a' : 'button'
-      }
-    },
-
     props: {
       label: {
         type: String,
@@ -65,6 +59,12 @@
       weight: {
         type: String,
         default: undefined
+      }
+    },
+
+    setup (props) {
+      return {
+        tag: props.href ? 'a' : 'button'
       }
     }
   })
