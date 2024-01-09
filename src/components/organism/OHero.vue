@@ -1,8 +1,9 @@
 <template>
   <div class="OHero">
+    <span class="OHero__background"/>
+
     <div class="OHero__content">
       <AText
-        color="tertiary"
         tag="h3"
         weight="bold"
       >
@@ -11,7 +12,6 @@
 
       <AText
         class="OHero__title"
-        color="tertiary"
         size="xxl"
         tag="h1"
       >
@@ -19,7 +19,7 @@
       </AText>
 
       <AText
-        color="tertiary"
+        tag="p"
       >
         Download the bella onoje’s food app now on
       </AText>
@@ -42,6 +42,12 @@
           weight="700"
         />
       </div>
+
+      <img
+        alt="product shot one"
+        class="OHeader__product"
+        src="../../assets/hero-product.png"
+      >
     </div>
   </div>
 </template>
@@ -58,18 +64,48 @@
 </script>
 
 <style lang="sass">
-  .OHero
-    background: #252b42
+  @use "../../assets/variables.sass" as *
 
-    &__title
-      text-align: center
+  .OHero
+    display: flex
+    justify-content: center
+    position: relative
+
+    // FIXME zero height vs stack problem
+    &__background
+      position: absolute
+      top: 0
+      width: 100%
+      height: 560px
+      background: url('../../assets/hero.png') no-repeat center center
+      background-size: cover
+
+      @include breakpoint('md')
+        display: none
+
 
     &__content
-      padding-top: 73px
+      position: absolute
+      max-width: 940px
       display: flex
       flex-direction: column
       align-items: center
       gap: 10px
+      color: $color-tertiary
+
+      @include breakpoint('md')
+        color: $color-secondary
+
+      > h1
+        text-align: center
+        margin-bottom: 27px
+
+      > h3
+        margin-top: 73px
+        margin-bottom: 17px
+
+      > p
+        margin-bottom: 54px
 
     &__action
       overflow: hidden

@@ -90,7 +90,7 @@
       background-color: transparent
 
     &[data-rounded="true"]
-      border-radius: 999px
+      border-radius: 30px
       padding: 16px
 
     &:is(a)
