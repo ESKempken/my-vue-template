@@ -1,0 +1,9 @@
+$color-page: #fff
+
+$breakpoints: ("sm": 576px, "md": 768px)
+
+// down
+@mixin breakpoint($name)
+  @media (max-width: map-get($breakpoints, $name))
+    @content
+
