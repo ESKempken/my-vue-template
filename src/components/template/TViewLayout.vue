@@ -1,9 +1,7 @@
 <template>
   <div class="TViewLayout">
 
-    <nav>
-      <OHeader/>
-    </nav>
+    <OHeader/>
 
     <main class="TViewLayout__content">
       <slot/>
@@ -32,4 +30,5 @@
     flex-direction: column
     height: 100vh
     position: relative
+    background-color: $color-page
 </style>

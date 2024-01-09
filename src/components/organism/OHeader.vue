@@ -1,32 +1,33 @@
 <template>
   <div class="OHeader">
-    <div>
-      logo
-    </div>
+    <img
+      alt="logo"
+      class="OHeader__logo"
+      src="../../assets/logo.png"
+    >
 
     <div data-device="mobile">
-      <MHamburgerMenu/>
+      <MNavHamburger/>
     </div>
 
     <div data-device="desktop">
-      <template v-for="route in $router.options.routes">
-        <router-link :to="route.path">
-          {{ route.name }}
-        </router-link>
-      </template>
+      <MNavPanel/>
     </div>
+
   </div>
 </template>
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import MHamburgerMenu from '../molecule/MHamburgerMenu.vue'
+  import MNavHamburger from '../molecule/MNavHamburger.vue'
+  import MNavPanel from '../molecule/MNavPanel.vue'
 
   export default defineComponent({
     name: 'OHeader',
 
     components: {
-      MHamburgerMenu
+      MNavPanel,
+      MNavHamburger
     }
   })
 </script>
@@ -41,6 +42,12 @@
     display: flex
     justify-content: space-between
     align-items: center
+
+    &__logo
+      height: 100px
+
+      @include breakpoint('sm')
+        height: 50px
 
     [data-device="mobile"]
       display: none

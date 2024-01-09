@@ -1,32 +1,31 @@
 <template>
-  <div class="MHamburgerMenu">
-    <i @click="toggleMenu()">
-      Hamburger icon
-    </i>
+  <div class="MNavHamburger">
+    <AIcon
+      name="menu"
+      @click="toggleMenu()"
+    />
 
     <aside :data-show="expanded">
-      <i
-        class="MHamburgerMenu__close"
+      <AIcon
+        name="close"
         @click="toggleMenu()"
-      >
-        close
-      </i>
+      />
 
-      <ElMenu>
-        <template v-for="route in $router.options.routes">
+      <nav>
+        <ElMenu>
+          <template v-for="route in $router.options.routes">
 
-          <ElMenuItem>
-            <router-link :to="route.path">
-              {{ route.name }}
-            </router-link>
-          </ElMenuItem>
-          <ElMenuItem/>
+            <ElMenuItem>
+              <router-link :to="route.path">
+                {{ route.name }}
+              </router-link>
+            </ElMenuItem>
 
-        </template>
-      </ElMenu>
+          </template>
+        </ElMenu>
+      </nav>
 
     </aside>
-
 
   </div>
 </template>
@@ -34,9 +33,10 @@
 <script lang="ts">
   import { ElMenu, ElMenuItem } from 'element-plus'
   import { defineComponent } from 'vue'
+  import AIcon from '../atom/AIcon.vue'
 
   export default defineComponent({
-    name: 'MHamburgerMenu',
+    name: 'MNavHamburger',
     data () {
       return {
         expanded: false
@@ -47,12 +47,12 @@
         this.expanded = !this.expanded
       }
     },
-    components: { ElMenuItem, ElMenu }
+    components: { AIcon, ElMenuItem, ElMenu }
   })
 </script>
 
 <style lang="sass">
-  .MHamburgerMenu
+  .MNavHamburger
 
     [data-show="false"]
       display: none
@@ -63,7 +63,7 @@
       right: 0
       height: 100%
       width: 300px
-      background: red
+      background: lightgrey
 
       &[data-show]
         visibility: visible

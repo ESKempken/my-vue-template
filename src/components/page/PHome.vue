@@ -1,13 +1,14 @@
 <template>
   <div>
+    <section>
+      ss
+    </section>
+
     Home
   </div>
 </template>
 
-<script
-  lang="ts"
-  setup
->
+<script lang="ts">
 
 </script>
 
