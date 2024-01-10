@@ -13,10 +13,8 @@
 
 <script lang="ts">
   import { defineComponent, PropType } from 'vue'
+  import type { OptionsFont, OptionsSize, OptionsColor } from '../../assets/types.ts'
 
-  type optionsFont = 'Poppins' | 'Montserrat'
-  type optionsColor = 'primary' | 'secondary' | 'black' | 'white' | 'light' | 'dark'
-  type optionsSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
   export default defineComponent({
     name: 'AText',
@@ -28,7 +26,7 @@
       },
 
       size: {
-        type: String as PropType<optionsSize>,
+        type: String as PropType<OptionsSize>,
         default: null
       },
 
@@ -38,12 +36,12 @@
       },
 
       color: {
-        type: String as PropType<optionsColor>,
+        type: String as PropType<OptionsColor>,
         default: null
       },
 
       font: {
-        type: String as PropType<optionsFont>,
+        type: String as PropType<OptionsFont>,
         default: null
       }
     }
