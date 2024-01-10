@@ -11,11 +11,7 @@ cd arcadian-ui-test
 yarn install
 ```
 
-## Usage
+## Launch
 
 To run local development environment   
 `yarn dev`
-
-To run local production build   
-`yarn build` (image assets not compiled)   
-`yarn preview`
