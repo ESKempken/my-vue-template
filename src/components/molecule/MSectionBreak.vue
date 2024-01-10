@@ -6,7 +6,6 @@
       class="MSectionBreak__title"
       color="black"
       font="Poppins"
-      size="lg"
       tag="h2"
       weight="600"
     >
@@ -51,8 +50,12 @@
       gap: 49px
 
     &__title
-      padding-left: spacer("md")
-      padding-right: spacer("md")
+      font-size: map-get($font-size, "lg")
+      padding-left: spacer("sm")
+      padding-right: spacer("sm")
+
+      @include breakpoint('sm')
+        font-size: map-get($font-size, "md")
 
 
     &__divider

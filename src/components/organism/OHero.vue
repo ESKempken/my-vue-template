@@ -74,6 +74,8 @@
     position: relative
 
     &__text
+      padding-left: spacer("sm")
+      padding-right: spacer("sm")
       margin-top: spacer("lg")
       display: flex
       flex-direction: column

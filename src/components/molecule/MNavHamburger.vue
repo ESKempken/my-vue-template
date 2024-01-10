@@ -5,7 +5,10 @@
       @click="toggleMenu()"
     />
 
-    <aside :data-show="expanded">
+    <aside
+      :data-show="expanded"
+      class="MNavHamburger__sidebar"
+    >
       <AIcon
         name="close"
         @click="toggleMenu()"
@@ -29,11 +32,12 @@
 <script lang="ts">
   import { ElMenu, ElMenuItem } from 'element-plus'
   import { defineComponent } from 'vue'
+  import AButton from '../atom/AButton.vue'
   import AIcon from '../atom/AIcon.vue'
 
   export default defineComponent({
     name: 'MNavHamburger',
-    components: { AIcon, ElMenuItem, ElMenu },
+    components: { AButton, AIcon, ElMenuItem, ElMenu },
     data () {
       return {
         expanded: false
@@ -48,18 +52,25 @@
 </script>
 
 <style lang="sass">
+  @use "../../assets/variables.sass" as *
+
   .MNavHamburger
+
+    &__sidebar
+      position: absolute
+      z-index: 2
+      top: 0
+      right: 0
+      height: 100%
+      background: $color-white
+      box-shadow: -10px 0px 10px 1px $color-dark
+
 
     [data-show="false"]
       display: none
 
     [data-show="true"]
-      position: absolute
-      top: 0
-      right: 0
-      height: 100%
       width: 300px
-      background: lightgrey
 
       &[data-show]
         visibility: visible
