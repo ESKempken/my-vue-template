@@ -7,6 +7,7 @@
     <OSection
       description="An account is created with your email and a desired password"
       img-name="product-3"
+      reverse
       subtitle="Create an account"
       title="Create/login to an existing account to get started"
     />
@@ -14,7 +15,6 @@
     <OSection
       description="An account is created with your email and a desired password"
       img-name="product-3"
-      reverse
       subtitle="Create an account"
       title="Create/login to an existing account to get started"
     />

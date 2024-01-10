@@ -3,23 +3,32 @@
     :data-reverse="reverse"
     class="OSection"
   >
+    <div class="OSection__content">
+      <AText
+        color="primary"
+        weight="700"
+      >
+        {{ $props.subtitle }}
+      </AText>
+      <AText
+        color="secondary"
+        size="lg"
+        weight="700"
+      >
+        {{ $props.title }}
+      </AText>
+      <AText
+        color="dark"
+      >
+        {{ $props.description }}
+      </AText>
+    </div>
+
     <img
       :src="pngPath"
       alt="front view product shot"
       class="OSection__image"
     >
-
-    <div class="OSection__content">
-      <AText weight="700">
-        {{ $props.subtitle }}
-      </AText>
-      <AText size="lg">
-        {{ $props.title }}
-      </AText>
-      <AText>
-        {{ $props.description }}
-      </AText>
-    </div>
   </section>
 </template>
 
@@ -74,22 +83,34 @@
     outline: red solid 1px
     width: 100%
 
-    &__content
-      flex: 0 0 50%
-      display: flex
-      justify-content: center
-      flex-direction: column
-
-    &__image
-      padding-left: spacer("lg")
-
     &[data-reverse]
       flex-direction: row-reverse
 
-      .OSection__image
-        padding-right: spacer("lg")
+    @include breakpoint('md')
+      margin-left: spacer("md")
+      margin-right: spacer("md")
+      flex-direction: column !important
+      //FIXME Specificity data attr
+
+      .OSection__content, .OSection__image
+        margin-left: 0
+        margin-right: 0
 
       .OSection__content
-        padding-left: spacer("lg")
+        text-align: center
+        gap: spacer("md")
+
+    &__content
+      flex: 0 0 50%
+      display: flex
+      gap: spacer("sm")
+      justify-content: center
+      flex-direction: column
+      margin-left: spacer("lg")
+
+    &__image
+      margin-left: spacer("lg")
+      margin-right: spacer("lg")
+
 
 </style>

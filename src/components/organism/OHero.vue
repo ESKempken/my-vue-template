@@ -74,6 +74,7 @@
   .OHero
     position: relative
     width: 100%
+    overflow: hidden
 
     &__layout
       display: flex
@@ -100,7 +101,7 @@
       flex-direction: column
       align-items: center
       text-align: center
-      color: $color-tertiary
+      color: $color-white
 
       @include breakpoint('md')
         color: $color-secondary
@@ -113,6 +114,9 @@
 
       > p
         margin-bottom: 54px
+
+        @include breakpoint('md')
+          color: $color-dark
 
     &__content
       max-width: 940px

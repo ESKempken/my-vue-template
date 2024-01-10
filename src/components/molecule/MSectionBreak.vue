@@ -3,7 +3,8 @@
     <ADivider class="MSectionBreak__divider" />
 
     <AText
-      color="dark"
+      class="MSectionBreak__title"
+      color="black"
       font="Poppins"
       size="lg"
       tag="h2"
@@ -44,14 +45,21 @@
     padding-right: spacer("lg")
 
     @include breakpoint('sm')
+      padding-left: 0
+      padding-right: 0
       flex-direction: column-reverse
       gap: 49px
+
+    &__title
+      padding-left: spacer("md")
+      padding-right: spacer("md")
+
 
     &__divider
       margin-left: spacer("lg")
       margin-right: spacer("lg")
 
-      @include breakpoint('sm')
+      @include breakpoint('lg')
         margin-left: 0
         margin-right: 0
 

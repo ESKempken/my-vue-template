@@ -48,7 +48,7 @@
 
       color: {
         type: String,
-        default: 'tertiary'
+        default: 'white'
       },
 
       background: {
@@ -86,7 +86,7 @@
         color: #{$color}
 
     &:not([data-background])
-      border: 1px solid $color-tertiary
+      border: 1px solid $color-white
       background-color: transparent
 
     &[data-rounded="true"]

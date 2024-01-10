@@ -14,7 +14,8 @@
 <script lang="ts">
   import { defineComponent, PropType } from 'vue'
 
-  type FontOptions = 'Poppins' | 'Montserrat'
+  type optionsFont = 'Poppins' | 'Montserrat'
+  type optionsColor = 'primary' | 'secondary' | 'black' | 'white' | 'light' | 'dark'
 
   export default defineComponent({
     name: 'AText',
@@ -36,12 +37,12 @@
       },
 
       color: {
-        type: String,
+        type: String as PropType<optionsColor>,
         default: null
       },
 
       font: {
-        type: String as PropType<FontOptions>,
+        type: String as PropType<optionsFont>,
         default: null
       }
     }
