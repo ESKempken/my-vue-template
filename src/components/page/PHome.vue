@@ -2,7 +2,7 @@
   <div class="PHome">
     <!-- FIXME -->
     <!--    <section style="width: 100%; height: 1200px;">-->
-    <!--      <OHero/>-->
+    <!--      <OHero />-->
     <!--    </section>-->
 
     <div class="PHome__subtitle">
@@ -10,7 +10,7 @@
 
       <AText
         color="dark"
-        size="xl"
+        size="lg"
         tag="h2"
         weight="600"
       >
@@ -18,14 +18,20 @@
       </AText>
     </div>
 
-    <section>
-      <OSection
-        description="An account is created with your email and a desired password"
-        img-name="product-3"
-        subtitle="Create an account"
-        title="Create/login to an existing account to get started"
-      />
-    </section>
+    <OSection
+      description="An account is created with your email and a desired password"
+      img-name="product-3"
+      subtitle="Create an account"
+      title="Create/login to an existing account to get started"
+    />
+
+    <OSection
+      description="An account is created with your email and a desired password"
+      img-name="product-3"
+      reverse
+      subtitle="Create an account"
+      title="Create/login to an existing account to get started"
+    />
 
     <footer>
       footer

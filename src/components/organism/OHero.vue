@@ -12,7 +12,7 @@
 
       <AText
         class="OHero__title"
-        size="xxl"
+        size="xl"
         tag="h1"
       >
         Why stay hungry when you can order form Bella Onojie

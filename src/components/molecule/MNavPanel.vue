@@ -9,6 +9,7 @@
         <AText
           :data-active="isActive(route.path)"
           class="MNavPanel__label"
+          size="sm"
           tag="h3"
           weight="600"
         >

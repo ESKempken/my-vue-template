@@ -6,11 +6,16 @@ $color-light: #E4E4E4
 $color-dark: #000
 
 $colors: ("primary": $color-primary, "secondary": $color-secondary, "tertiary": $color-tertiary)
-$font-size: ("sm": 12px, "md": 16px, "lg": 24px, "xl": 40px, "xxl": 58px)
 $breakpoints: ("sm": 576px, "md": 768px)
+$font-size: ("xs": 12px, "sm": 16px, "md": 24px, "lg": 40px, "xl": 58px)
+$spacers: ("sm": 0px, "md": 0px, "lg": 80px)
+
 
 // down
 @mixin breakpoint($name)
   @media (max-width: map-get($breakpoints, $name))
     @content
 
+
+@function spacer($key: "md")
+  @return map-get($spacers, $key)
