@@ -3,6 +3,12 @@
     :data-reverse="reverse"
     class="OSection"
   >
+    <img
+      :src="pngPath"
+      alt="front view product shot"
+      class="OSection__image"
+    >
+
     <div class="OSection__content">
       <AText
         color="primary"
@@ -25,12 +31,6 @@
         {{ $props.description }}
       </AText>
     </div>
-
-    <img
-      :src="pngPath"
-      alt="front view product shot"
-      class="OSection__image"
-    >
   </section>
 </template>
 
@@ -84,34 +84,51 @@
     padding-right: spacer("lg")
     width: 100%
 
-    &[data-reverse]
-      flex-direction: row-reverse
+    --image-left: #{spacer("lg")}
+    --image-right: auto
+    --content-left: 0
+    --content-right: 0
 
     @include breakpoint('md')
-      padding-left: spacer("md")
-      padding-right: spacer("md")
-      flex-direction: column !important
-      //FIXME Specificity data attr
+      flex-direction: column-reverse
 
       .OSection__content, .OSection__image
-        padding-left: 0
-        padding-right: 0
+        margin-left: auto
+        margin-right: auto
+
+        --image-left: 0
+        --image-right: 0
+        --content-left: 0
+        --content-right: 0
 
       .OSection__content
         text-align: center
         gap: spacer("md")
 
+
+    &[data-reverse]
+      flex-direction: row-reverse
+      --image-left: auto
+      --image-right: #{spacer("lg")}
+      --content-left: #{spacer("lg")}
+      --content-right: auto
+
+      @include breakpoint('md')
+        // Specificity rewrite
+        flex-direction: column-reverse
+
     &__content
+      padding-left: var(--content-left)
+      padding-right: var(--content-right)
       flex: 0 0 50%
       display: flex
+      flex-direction: column
       gap: spacer("sm")
       justify-content: center
-      flex-direction: column
-      padding-left: spacer("lg")
 
     &__image
-      padding-left: spacer("lg")
-      padding-right: spacer("lg")
+      padding-left: var(--image-left)
+      padding-right: var(--image-right)
 
 
 </style>

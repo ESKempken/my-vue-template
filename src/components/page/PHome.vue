@@ -10,7 +10,6 @@
       <OSection
         description="An account is created with your email and a desired password"
         img-name="product-3"
-        reverse
         subtitle="Create an account"
         title="Create/login to an existing account to get started"
       />
@@ -18,6 +17,7 @@
       <OSection
         description="Shop for your favorite meals or drinks and enjoy while doing it."
         img-name="product-4"
+        reverse
         subtitle="Explore varieties"
         title="Shop for your favorites meal as e dey hot."
       />
@@ -25,7 +25,6 @@
       <OSection
         description="When you done check out and get it delivered with ease."
         img-name="product-5"
-        reverse
         subtitle="Checkout"
         title="When you done check out and get it delivered."
       />
@@ -50,8 +49,11 @@
   .PHome
     position: relative
     overflow: hidden
+    display: flex
+    justify-content: center
 
     &__contain
+      max-width: 1380px
       display: flex
       flex-direction: column
       align-items: center
