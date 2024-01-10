@@ -5,18 +5,7 @@
     <!--      <OHero />-->
     <!--    </section>-->
 
-    <div class="PHome__subtitle">
-      <ADivider />
-
-      <AText
-        color="dark"
-        size="lg"
-        tag="h2"
-        weight="600"
-      >
-        How the app works
-      </AText>
-    </div>
+    <MSectionBreak title="How the app works" />
 
     <OSection
       description="An account is created with your email and a desired password"
@@ -43,11 +32,12 @@
   import { defineComponent } from 'vue'
   import ADivider from '../atom/ADivider.vue'
   import AText from '../atom/AText.vue'
+  import MSectionBreak from '../molecule/MSectionBreak.vue'
   import OHero from '../organism/OHero.vue'
   import OSection from '../organism/OSection.vue'
 
   export default defineComponent({
-    components: { OSection, ADivider, AText, OHero }
+    components: { MSectionBreak, OSection, ADivider, AText, OHero }
   })
 </script>
 
@@ -58,16 +48,5 @@
     display: flex
     flex-direction: column
     align-items: center
-
-    &__subtitle
-      width: 100%
-      text-align: center
-      display: flex
-      flex-direction: column
-      gap: 72px
-
-      @include breakpoint('sm')
-        flex-direction: column-reverse
-        gap: 49px
 
 </style>
