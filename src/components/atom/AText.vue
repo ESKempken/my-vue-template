@@ -16,6 +16,7 @@
 
   type optionsFont = 'Poppins' | 'Montserrat'
   type optionsColor = 'primary' | 'secondary' | 'black' | 'white' | 'light' | 'dark'
+  type optionsSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
   export default defineComponent({
     name: 'AText',
@@ -27,8 +28,8 @@
       },
 
       size: {
-        type: String,
-        default: 'md'
+        type: String as PropType<optionsSize>,
+        default: null
       },
 
       weight: {

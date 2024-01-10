@@ -96,4 +96,9 @@
     &:is(a)
       text-decoration: none
 
+    &:hover,
+    &:focus-visible,
+    &:active
+      transform: scale(1.1)
+
 </style>

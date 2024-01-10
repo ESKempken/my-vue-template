@@ -6,6 +6,7 @@
     <div class="OSection__content">
       <AText
         color="primary"
+        size="md"
         weight="700"
       >
         {{ $props.subtitle }}
@@ -19,6 +20,7 @@
       </AText>
       <AText
         color="dark"
+        size="md"
       >
         {{ $props.description }}
       </AText>
@@ -80,21 +82,20 @@
     gap: spacer("lg")
     padding-left: spacer("lg")
     padding-right: spacer("lg")
-    outline: red solid 1px
     width: 100%
 
     &[data-reverse]
       flex-direction: row-reverse
 
     @include breakpoint('md')
-      margin-left: spacer("md")
-      margin-right: spacer("md")
+      padding-left: spacer("md")
+      padding-right: spacer("md")
       flex-direction: column !important
       //FIXME Specificity data attr
 
       .OSection__content, .OSection__image
-        margin-left: 0
-        margin-right: 0
+        padding-left: 0
+        padding-right: 0
 
       .OSection__content
         text-align: center
@@ -106,11 +107,11 @@
       gap: spacer("sm")
       justify-content: center
       flex-direction: column
-      margin-left: spacer("lg")
+      padding-left: spacer("lg")
 
     &__image
-      margin-left: spacer("lg")
-      margin-right: spacer("lg")
+      padding-left: spacer("lg")
+      padding-right: spacer("lg")
 
 
 </style>
