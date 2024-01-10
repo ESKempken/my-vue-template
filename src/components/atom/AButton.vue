@@ -3,7 +3,6 @@
     :is="tag"
     :data-background="background"
     :data-color="color"
-    :data-outline="outline"
     :data-rounded="rounded"
     :href="href"
     class="AButton"

@@ -35,13 +35,13 @@
   @use "../../assets/variables.sass" as *
 
   .OHeader
-    padding: 26px 40px 26px 90px
+    padding: spacer("sm") spacer("md") spacer("sm") spacer("lg")
     display: flex
     justify-content: space-between
     align-items: center
 
-    @include breakpoint('sm')
-      padding: 16px 17px
+    @include breakpoint('md')
+      padding: spacer("sm")
 
     &__logo
       height: 100px

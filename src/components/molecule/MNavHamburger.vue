@@ -16,7 +16,10 @@
 
       <nav>
         <ElMenu>
-          <template v-for="route in $router.options.routes">
+          <template
+            v-for="route in $router.options.routes"
+            :key="route.id"
+          >
             <ElMenuItem>
               <router-link :to="route.path">
                 {{ route.name }}

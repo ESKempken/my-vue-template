@@ -42,7 +42,7 @@
 
   .MNavPanel
     display: flex
-    gap: 90px
+    gap: spacer("lg")
 
     &__button
       padding: 10px

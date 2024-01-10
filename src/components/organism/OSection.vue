@@ -91,6 +91,7 @@
 
     @include breakpoint('md')
       flex-direction: column-reverse
+      gap: spacer("md")
 
       .OSection__content, .OSection__image
         margin-left: auto
