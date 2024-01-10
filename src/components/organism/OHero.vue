@@ -119,6 +119,7 @@
 
       @include breakpoint('md')
         flex-direction: column
+        gap: spacer("sm")
 
         .OHero__button:last-child
           border-color: $color-primary

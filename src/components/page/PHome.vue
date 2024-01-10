@@ -51,6 +51,7 @@
     overflow: hidden
     display: flex
     justify-content: center
+    margin-bottom: spacer("xl")
 
     &__contain
       max-width: 1380px
