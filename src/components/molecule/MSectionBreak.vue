@@ -4,6 +4,7 @@
 
     <AText
       color="dark"
+      font="Poppins"
       size="lg"
       tag="h2"
       weight="600"

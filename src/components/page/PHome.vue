@@ -1,9 +1,6 @@
 <template>
   <div class="PHome">
-    <!-- FIXME -->
-    <!--    <section style="width: 100%; height: 1200px;">-->
-    <!--      <OHero />-->
-    <!--    </section>-->
+    <OHero />
 
     <MSectionBreak title="How the app works" />
 
@@ -48,5 +45,6 @@
     display: flex
     flex-direction: column
     align-items: center
+    gap: spacer("xl")
 
 </style>

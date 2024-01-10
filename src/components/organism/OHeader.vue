@@ -46,13 +46,13 @@
     &__logo
       height: 100px
 
-      @include breakpoint('sm')
+      @include breakpoint('md')
         height: 50px
 
     [data-device="mobile"]
       display: none
 
-    @include breakpoint('sm')
+    @include breakpoint('md')
       [data-device="mobile"]
         display: block
 

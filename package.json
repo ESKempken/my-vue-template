@@ -10,6 +10,8 @@
     "lint": "eslint --ext .vue,.js,ts src --fix"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.0.16",
+    "@fontsource/poppins": "^5.0.8",
     "element-plus": "^2.4.4",
     "eslint": "^8.56.0",
     "eslint-plugin-vue": "^9.19.2",
