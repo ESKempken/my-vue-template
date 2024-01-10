@@ -90,6 +90,8 @@
     --content-right: 0
 
     @include breakpoint('md')
+      padding-left: spacer("md")
+      padding-right: spacer("md")
       flex-direction: column-reverse
       gap: spacer("md")
 
