@@ -1,10 +1,6 @@
 <template>
   <div class="OHeader">
-    <img
-      alt="logo"
-      class="OHeader__logo"
-      src="../../assets/logo.png"
-    >
+    <AText tag="h1" size="sm">my-vue-template</AText>
 
     <div data-device="mobile">
       <MNavHamburger />
@@ -18,6 +14,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
+  import AText from '../atom/AText.vue'
   import MNavHamburger from '../molecule/MNavHamburger.vue'
   import MNavPanel from '../molecule/MNavPanel.vue'
 
@@ -25,6 +22,7 @@
     name: 'OHeader',
 
     components: {
+      AText,
       MNavPanel,
       MNavHamburger
     }
@@ -35,19 +33,13 @@
   @use "../../assets/variables.sass" as *
 
   .OHeader
-    padding: spacer("sm") spacer("md") spacer("sm") spacer("lg")
+    padding: spacer("sm") spacer("lg")
     display: flex
     justify-content: space-between
     align-items: center
 
     @include breakpoint('md')
       padding: spacer("sm")
-
-    &__logo
-      height: 100px
-
-      @include breakpoint('md')
-        height: 50px
 
     [data-device="mobile"]
       display: none

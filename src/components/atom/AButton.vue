@@ -3,16 +3,17 @@
     :is="tag"
     :data-background="background"
     :data-color="color"
-    :data-rounded="rounded"
+    :data-size="size"
     :href="href"
     class="AButton"
   >
-    <AText
-      :size="size"
-      :weight="weight"
-    >
-      {{ $props.label }}
-    </AText>
+    <slot/>
+
+    <template v-if="$props.label">
+      <AText>
+        {{ $props.label }}
+      </AText>
+    </template>
   </Component>
 </template>
 
@@ -37,11 +38,6 @@
         default: undefined
       },
 
-      rounded: {
-        type: Boolean,
-        default: undefined
-      },
-
       size: {
         type: String as PropType<OptionsSize>,
         default: undefined
@@ -55,11 +51,6 @@
       background: {
         type: String as PropType<OptionsColor>,
         default: 'primary'
-      },
-
-      weight: {
-        type: String,
-        default: undefined
       }
     },
 
@@ -77,7 +68,10 @@
   .AButton
     border-radius: 10px
     cursor: pointer
-    padding: 18px
+
+    @each $name, $spacer in $spacers
+      &[data-size="#{$name}"]
+        padding: #{$spacer}
 
     @each $name, $color in $colors
       &[data-background="#{$name}"]
@@ -85,14 +79,6 @@
 
       &[data-color="#{$name}"]
         color: #{$color}
-
-    &:not([data-background])
-      border: 1px solid $color-white
-      background-color: transparent
-
-    &[data-rounded="true"]
-      border-radius: 30px
-      padding: 16px
 
     &:is(a)
       text-decoration: none

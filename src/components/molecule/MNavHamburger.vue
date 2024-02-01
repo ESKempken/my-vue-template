@@ -1,18 +1,22 @@
 <template>
   <div class="MNavHamburger">
-    <AIcon
-      name="menu"
+    <AButton
+      size="xs"
       @click="toggleMenu()"
-    />
+    >
+      <AIcon name="menu" />
+    </AButton>
 
     <aside
       :data-show="expanded"
       class="MNavHamburger__sidebar"
     >
-      <AIcon
-        name="close"
+      <AButton
+        size="xs"
         @click="toggleMenu()"
-      />
+      >
+        <AIcon name="close" />
+      </AButton>
 
       <nav>
         <ElMenu>
@@ -65,7 +69,7 @@
       top: 0
       right: 0
       height: 100%
-      background: $color-white
+      background: $color-primary
       box-shadow: -10px 0px 10px 1px $color-dark
 
 

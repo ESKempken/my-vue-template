@@ -1,17 +1,23 @@
-# Arcadian UI Test
+# my-vue-template
 
-This Vue 3 SPA was developed to showcase my capacity to develop high quality frontend web applications.
+A Vue project template for quick start.
+
+## Includes
+
+- Router
+- Eslint
+- Atomic structure
+- Types declaration
+- Scss variables
+- Some components
+- Icons
+- Fonts
+- Style reset
 
 ## Install
 
-Clone repo then install dependencies   
-```
-git clone "https://github.com/ESKempken/arcadian-ui-test.git"
-cd arcadian-ui-test
-yarn install
-```
+// TODO
 
-## Launch
-
-To run local development environment   
-`yarn dev`
+```
+clone? fork? mirror? 
+```

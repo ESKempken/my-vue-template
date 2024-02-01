@@ -29,4 +29,7 @@
 
 <style lang="sass">
 
+  .AIcon
+    display: block
+
 </style>
